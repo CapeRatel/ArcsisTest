@@ -1,0 +1,29 @@
+.row
+  .col-sm-12
+    .panel.panel-default
+      .panel-heading
+        .pull-left= t('.title')
+        .pull-right= link_to t('shared.add'), new_user_path, class: 'btn btn-primary btn-sm'
+        .clearfix
+      .panel-body
+        table.table.table-hover
+          thead
+            th #
+            th= t('.table.email')
+            th= t('.table.first_name')
+            th= t('.table.last_name')
+            th= t('.table.phone')
+            th= t('.table.status')
+            th
+          tbody
+            - @users.each do |user|
+              tr
+                td= user.id
+                td= user.email
+                td= user.first_name
+                td= user.last_name
+                td= user.phone
+                td= boolean_humanize(user.status)
+                td
+                  => link_to t('shared.edit'), edit_user_path(user), class: 'btn btn-warning btn-xs'
+                  => link_to t('shared.destroy'), user_path(user), method: :delete, class: 'btn btn-danger btn-xs'

@@ -1,0 +1,49 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        email: "Email"
+        password: "Пароль"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        phone: "Телефон"
+        status: "Активен?"
+
+  shared:
+    add: "Добавить"
+    edit: "Редактировать"
+    destroy: "Удалить"
+    "true": "Да"
+    "false": "Нет"
+    created: "Успешно создано"
+    updated: "Успешно обновлено"
+    destroyed: "Успешно удалено"
+    not_destroyed: "Удалить не удалось"
+
+  layouts:
+    application:
+      users: "Пользователи"
+      sign_in: "Войти"
+      logout: "Выйти"
+      test_page: "Тестовая страница"
+      secret_page: "Секретная страница"
+
+  users:
+    index:
+      title: "Пользователи"
+      table:
+        email: "Email"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        phone: "Телефон"
+        status: "Активен?"
+    new:
+      title: "Добавить"
+    edit:
+      title: "Редактировать"
+
+  devise:
+    sessions:
+      new:
+        title: "Вход"
+        submit: "Войти"

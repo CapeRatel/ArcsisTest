@@ -1,0 +1,22 @@
+= form_for @user do |f|
+  .form-group class=('has-error' if @user.errors[:email].any?)
+    = f.label :email
+    = f.text_field :email, class: 'form-control'
+  .form-group class=('has-error' if @user.errors[:password].any?)
+    = f.label :password
+    = f.password_field :password, class: 'form-control'
+  .form-group class=('has-error' if @user.errors[:first_name].any?)
+    = f.label :first_name
+    = f.text_field :first_name, class: 'form-control'
+  .form-group class=('has-error' if @user.errors[:last_name].any?)
+    = f.label :last_name
+    = f.text_field :last_name, class: 'form-control'
+  .form-group class=('has-error' if @user.errors[:phone].any?)
+    = f.label :phone
+    = f.text_field :phone, class: 'form-control', placeholder: 'минимум 11 цифр'
+  .form-group
+    => f.check_box :status
+    = f.label :status
+
+  .form-group
+    = f.submit @user.new_record? ? t('shared.add') : t('shared.edit'), class: 'btn btn-primary btn-sm'
